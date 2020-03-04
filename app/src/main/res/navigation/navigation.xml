@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/mainActivity">
+
+    <fragment
+        android:id="@+id/utama"
+        android:name="org.d3if4107.bmi.Utama"
+        android:label="Kalkulator BMI"
+        tools:layout="@layout/fragment_utama">
+        <action
+            android:id="@+id/action_utama_to_gemuk"
+            app:destination="@id/gemuk" />
+        <action
+            android:id="@+id/action_utama_to_ideal"
+            app:destination="@id/ideal" />
+        <action
+            android:id="@+id/action_utama_to_kekurusan"
+            app:destination="@id/kekurusan" />
+        <fragment />
+        <action
+            android:id="@+id/action_utama_to_about"
+            app:destination="@id/about" />
+    </fragment>
+    <fragment
+        android:id="@+id/kekurusan"
+        android:name="org.d3if4107.bmi.Kekurusan"
+        android:label="Mengatasi Kekurusan"
+        tools:layout="@layout/fragment_kekurusan" />
+    <fragment
+        android:id="@+id/gemuk"
+        android:name="org.d3if4107.bmi.Gemuk"
+        android:label="Mengatasi Kegemukan"
+        tools:layout="@layout/fragment_gemuk" />
+    <fragment
+        android:id="@+id/ideal"
+        android:name="org.d3if4107.bmi.Ideal"
+        android:label="Menjaga Tetap Ideal"
+        tools:layout="@layout/fragment_ideal" />
+    <fragment
+        android:id="@+id/about"
+        android:name="org.d3if4107.bmi.about"
+        android:label="Info Aplikasi"
+        tools:layout="@layout/fragment_about" />
+</navigation>
